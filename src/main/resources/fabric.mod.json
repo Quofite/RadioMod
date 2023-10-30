@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "radiomod",
+  "version": "${version}",
+  "name": "radiomod",
+  "description": "",
+  "authors": [],
+  "contact": {
+    "repo": "https://github.com/gleb/radiomod"
+  },
+  "license": "All-Rights-Reserved",
+  "icon": "assets/radiomod/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "org.barbaris.radiomod.client.RadiomodClient"
+    ],
+    "main": [
+      "org.barbaris.radiomod.Radiomod"
+    ]
+  },
+  "mixins": [
+    "radiomod.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
