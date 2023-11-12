@@ -1,0 +1,10 @@
+{
+    "item.radiomod.capacitor": "Capacitor",
+    "item.radiomod.capacitor.tooltip": "Capacitor stores electric charges for a while",
+    "item.radiomod.transistor": "Transistor",
+    "item.radiomod.transistor.tooltip": "Solid-state element amplifying or switching electic signals",
+    "item.radiomod.diode": "Diode",
+    "item.radiomod.diode.tooltip": "Solid-state element that let signal pass only in one direction",
+
+    "itemGroup.radiomod.group": "Radio Mod"
+}

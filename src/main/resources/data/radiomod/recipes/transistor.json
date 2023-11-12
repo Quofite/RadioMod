@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "NRN",
+      "FFF",
+      "BBB"
+    ],
+    "key": {
+      "F": {
+        "item": "minecraft:flint"
+      },
+      "N": {
+        "item": "minecraft:iron_nugget"
+      },
+      "R": {
+        "item": "minecraft:redstone"
+      },
+      "B": {
+        "item": "minecraft:iron_bars"
+      }
+    },
+    "result": {
+      "item": "radiomod:transistor",
+      "count": 4
+    }
+}
+

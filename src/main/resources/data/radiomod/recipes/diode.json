@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "FFF",
+      "B B"
+    ],
+    "key": {
+      "F": {
+        "item": "minecraft:flint"
+      },
+      "B": {
+        "item": "minecraft:iron_bars"
+      }
+    },
+    "result": {
+      "item": "radiomod:diode",
+      "count": 4
+    }
+}

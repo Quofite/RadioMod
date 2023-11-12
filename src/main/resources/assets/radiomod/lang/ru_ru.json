@@ -1,0 +1,10 @@
+{
+    "item.radiomod.capacitor": "Конденсатор",
+    "item.radiomod.capacitor.tooltip": "Может хранить электрический заряд короткое время",
+    "item.radiomod.transistor": "Транзистор",
+    "item.radiomod.transistor.tooltip": "Полупроводник, управляющий или усиливающий электрический сигнал",
+    "item.radiomod.diode": "Диод",
+    "item.radiomod.diode.tooltip": "Полупроводник, который пропускает ток только в одном направлении",
+
+    "itemGroup.radiomod.group": "Radio Mod"
+}
