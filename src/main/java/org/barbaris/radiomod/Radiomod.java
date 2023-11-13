@@ -17,6 +17,9 @@ public class Radiomod implements ModInitializer {
     public static final Item CAPACITOR = new Capacitor(new FabricItemSettings());
     public static final Item TRANSISTOR = new Transistor(new FabricItemSettings());
     public static final Item DIODE = new Diode(new FabricItemSettings());
+    public static final Item RESISTOR = new Resistor(new FabricItemSettings());
+    public static final Item WIRE = new Wire(new FabricItemSettings());
+    public static final Item COIL = new Coil(new FabricItemSettings());
 
     // -------------- BLOCKS ---------
 
@@ -29,6 +32,9 @@ public class Radiomod implements ModInitializer {
                 entries.add(CAPACITOR);
                 entries.add(TRANSISTOR);
                 entries.add(DIODE);
+                entries.add(COIL);
+                entries.add(RESISTOR);
+                entries.add(WIRE);
             }).build();
 
     // -------------- INITIALIZER ----
@@ -37,6 +43,9 @@ public class Radiomod implements ModInitializer {
         Registry.register(Registries.ITEM, new Identifier("radiomod", "capacitor"), CAPACITOR);
         Registry.register(Registries.ITEM, new Identifier("radiomod", "transistor"), TRANSISTOR);
         Registry.register(Registries.ITEM, new Identifier("radiomod", "diode"), DIODE);
+        Registry.register(Registries.ITEM, new Identifier("radiomod", "coil"), COIL);
+        Registry.register(Registries.ITEM, new Identifier("radiomod", "resistor"), RESISTOR);
+        Registry.register(Registries.ITEM, new Identifier("radiomod", "wire"), WIRE);
         Registry.register(Registries.ITEM_GROUP, new Identifier("radiomod", "group"), ITEM_GROUP);
     }
 }

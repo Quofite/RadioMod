@@ -5,6 +5,12 @@
     "item.radiomod.transistor.tooltip": "Полупроводник, управляющий или усиливающий электрический сигнал",
     "item.radiomod.diode": "Диод",
     "item.radiomod.diode.tooltip": "Полупроводник, который пропускает ток только в одном направлении",
+    "item.radiomod.wire": "Провод",
+    "item.radiomod.wire.tooltip": "Провод проводит через себя электрический ток",
+    "item.radiomod.coil": "Дроссель",
+    "item.radiomod.coil.tooltip": "Медная катушка, способная хранить энергию в магнитной поле, которое она создает",
+    "item.radiomod.resistor": "Резистор",
+    "item.radiomod.resistor.tooltip": "Создает дополнительное сопротивление в цепи и снгижает уровень тока",
 
     "itemGroup.radiomod.group": "Radio Mod"
 }

@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "CIC",
+      "B B"
+    ],
+    "key": {
+      "C": {
+        "item": "minecraft:copper_ingot"
+      },
+      "I": {
+        "item": "minecraft:iron_nugget"
+      },
+      "B": {
+        "item": "minecraft:iron_bars"
+      }
+    },
+    "result": {
+      "item": "radiomod:resistor",
+      "count": 4
+    }
+}
