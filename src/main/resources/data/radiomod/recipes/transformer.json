@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "CIC",
+      "W W"
+    ],
+    "key": {
+      "C": {
+        "item": "radiomod:coil"
+      },
+      "I": {
+        "item": "minecraft:iron_ingot"
+      },
+      "W": {
+        "item": "radiomod:bare_wire"
+      }
+    },
+    "result": {
+      "item": "radiomod:transformer",
+      "count": 1
+    }
+}

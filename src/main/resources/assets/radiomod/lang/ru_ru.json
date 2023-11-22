@@ -5,12 +5,19 @@
     "item.radiomod.transistor.tooltip": "Полупроводник, управляющий или усиливающий электрический сигнал",
     "item.radiomod.diode": "Диод",
     "item.radiomod.diode.tooltip": "Полупроводник, который пропускает ток только в одном направлении",
+    "item.radiomod.bare_wire": "Оголённый провод",
+    "item.radiomod.bare_wire.tooltip": "Провод пропускает через себя электрический ток",
     "item.radiomod.wire": "Провод",
-    "item.radiomod.wire.tooltip": "Провод проводит через себя электрический ток",
+    "item.radiomod.wire.tooltip": "Провод с изоляцией",
     "item.radiomod.coil": "Дроссель",
-    "item.radiomod.coil.tooltip": "Медная катушка, способная хранить энергию в магнитной поле, которое она создает",
+    "item.radiomod.coil.tooltip": "Медная катушка, способная хранить энергию в магнитном поле, которое она создает",
     "item.radiomod.resistor": "Резистор",
-    "item.radiomod.resistor.tooltip": "Создает дополнительное сопротивление в цепи и снгижает уровень тока",
+    "item.radiomod.resistor.tooltip": "Создает дополнительное сопротивление в цепи и снижает уровень тока",
+    "item.radiomod.transformer": "Трансформатор",
+    "item.radiomod.transformer.tooltip": "Трансформатор преобразовывает напряжение",
+    
+    "block.radiomod.circuit_block": "Блок схемы",
+    "block.radiomod.circuit_block.tooltip": "Блок, в котором вы можете собирать электрические цепи",
 
     "itemGroup.radiomod.group": "Radio Mod"
 }

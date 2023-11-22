@@ -1,0 +1,20 @@
+{
+    "variants": {
+        "facing=east": {
+          "model": "radiomod:block/circuit_block",
+          "y": 90
+        },
+        "facing=north": {
+          "model": "radiomod:block/circuit_block"
+        },
+        "facing=south": {
+          "model": "radiomod:block/circuit_block",
+          "y": 180
+        },
+        "facing=west": {
+          "model": "radiomod:block/circuit_block",
+          "y": 270
+        }
+      }
+}
+

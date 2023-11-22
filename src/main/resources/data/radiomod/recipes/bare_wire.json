@@ -1,0 +1,15 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "CCC"
+    ],
+    "key": {
+      "C": {
+        "item": "minecraft:copper_ingot"
+      }
+    },
+    "result": {
+      "item": "radiomod:bare_wire",
+      "count": 16
+    }
+}

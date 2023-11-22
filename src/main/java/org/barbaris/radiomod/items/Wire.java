@@ -1,4 +1,4 @@
-package org.barbaris.radiomod;
+package org.barbaris.radiomod.items;
 
 import net.minecraft.client.item.TooltipContext;
 import net.minecraft.item.Item;
