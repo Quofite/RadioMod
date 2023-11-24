@@ -1,23 +1,31 @@
 {
     "item.radiomod.capacitor": "Capacitor",
-    "item.radiomod.capacitor.tooltip": "Capacitor stores electric charges for a while",
+    "item.radiomod.capacitor.tooltip": "Stores electric charges for a while",
     "item.radiomod.transistor": "Transistor",
     "item.radiomod.transistor.tooltip": "Solid-state element amplifying or switching electic signals",
     "item.radiomod.diode": "Diode",
     "item.radiomod.diode.tooltip": "Solid-state element that let signal pass only in one direction",
     "item.radiomod.bare_wire": "Bare Wire",
-    "item.radiomod.bare_wire.tooltip": "Wire conduct electric current",
+    "item.radiomod.bare_wire.tooltip": "Conduct electric current",
     "item.radiomod.wire": "Wire",
     "item.radiomod.wire.tooltip": "Wire with isolation",
     "item.radiomod.coil": "Inductor coil",
-    "item.radiomod.coil.tooltip": "Coil can store energy in magnetic field that it's creating",
+    "item.radiomod.coil.tooltip": "Can store energy in magnetic field that it's creating",
     "item.radiomod.resistor": "Resistor",
-    "item.radiomod.resistor.tooltip": "Resistor creates additional resistance in circuit and lowers current",
+    "item.radiomod.resistor.tooltip": "Creates additional resistance in circuit and lowers current",
     "item.radiomod.transformer": "Transformer",
-    "item.radiomod.transformer.tooltip": "Transformer changes voltage of the circuit",
+    "item.radiomod.transformer.tooltip": "Changes voltage of the circuit",
+    "item.radiomod.tube": "Electric tube",
+    "item.radiomod.tube.tooltip": "Amplifies current and voltage in circuit",
+    "item.radiomod.pcb": "PCB",
+    "item.radiomod.pcb.tooltip": "Used to connect elements to each other",
     
     "block.radiomod.circuit_block": "Circuit Block",
-    "block.radiomod.circuit_block.tooltip": "Block where you can assemble electric circuits",
+    "item.radiomod.circuit_block.tooltip": "Block where you can assemble electric circuits",
+    "block.radiomod.ampermetr": "Ampermetr",
+    "item.radiomod.circuit_block.ampermetr": "Device that shows current value in the circuit",
+
+    "item.radiomod.ampermetr.nosignal": "No current",
 
     "itemGroup.radiomod.group": "Radio Mod"
 }

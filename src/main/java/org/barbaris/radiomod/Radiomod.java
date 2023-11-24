@@ -7,7 +7,6 @@ import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -18,6 +17,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.screen.ScreenHandlerType;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
+import org.barbaris.radiomod.blocks.Ampermetr;
 import org.barbaris.radiomod.blocks.CircuitBlock;
 import org.barbaris.radiomod.blocks.CircuitBlockEntity;
 import org.barbaris.radiomod.blocks.CircuitBlockScreenHandler;
@@ -34,6 +34,8 @@ public class Radiomod implements ModInitializer {
     public static final Item COIL = new Coil(new FabricItemSettings());
     public static final Item BARE_WIRE = new BareWire(new FabricItemSettings());
     public static final Item TRANSFORMER = new Transformer(new FabricItemSettings());
+    public static final Item TUBE = new Tube(new FabricItemSettings());
+    public static final Item PCB = new Pcb(new FabricItemSettings());
 
     // -------------- BLOCKS ---------
     public static final Identifier CIRCUIT_ID = new Identifier("radiomod", "circuit_block");
@@ -41,6 +43,9 @@ public class Radiomod implements ModInitializer {
     public static final BlockItem CIRCUIT_BLOCK_ITEM = Registry.register(Registries.ITEM, CIRCUIT_ID, new BlockItem(CIRCUIT_BLOCK, new Item.Settings()));
     public static final BlockEntityType<CircuitBlockEntity> CIRCUIT_BLOCK_ENTITY = Registry.register(Registries.BLOCK_ENTITY_TYPE, CIRCUIT_ID, FabricBlockEntityTypeBuilder.create(CircuitBlockEntity::new, CIRCUIT_BLOCK).build(null));
     public static final ScreenHandlerType<CircuitBlockScreenHandler> CIRCUIT_BLOCK_SCREEN_HANDLER = ScreenHandlerRegistry.registerSimple(CIRCUIT_ID, CircuitBlockScreenHandler::new);
+
+    public static final Block AMPERMETR = Registry.register(Registries.BLOCK, new Identifier("radiomod", "ampermetr"), new Ampermetr(FabricBlockSettings.create().strength(1.0f).requiresTool()));
+    public static final BlockItem AMPERMETR_ITEM = Registry.register(Registries.ITEM, new Identifier("radiomod", "ampermetr"), new BlockItem(AMPERMETR, new Item.Settings()));
 
     // -------------- MIX ------------
     private static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()
@@ -55,7 +60,10 @@ public class Radiomod implements ModInitializer {
                 entries.add(WIRE);
                 entries.add(COIL);
                 entries.add(TRANSFORMER);
+                entries.add(PCB);
+                entries.add(TUBE);
 
+                entries.add(AMPERMETR_ITEM);
                 entries.add(CIRCUIT_BLOCK_ITEM);
             }).build();
 
@@ -70,6 +78,8 @@ public class Radiomod implements ModInitializer {
         Registry.register(Registries.ITEM, new Identifier("radiomod", "wire"), WIRE);
         Registry.register(Registries.ITEM, new Identifier("radiomod", "bare_wire"), BARE_WIRE);
         Registry.register(Registries.ITEM, new Identifier("radiomod", "transformer"), TRANSFORMER);
+        Registry.register(Registries.ITEM, new Identifier("radiomod", "pcb"), PCB);
+        Registry.register(Registries.ITEM, new Identifier("radiomod", "tube"), TUBE);
 
         Registry.register(Registries.ITEM_GROUP, new Identifier("radiomod", "group"), ITEM_GROUP);
     }

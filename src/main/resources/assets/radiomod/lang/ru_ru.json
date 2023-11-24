@@ -6,7 +6,7 @@
     "item.radiomod.diode": "Диод",
     "item.radiomod.diode.tooltip": "Полупроводник, который пропускает ток только в одном направлении",
     "item.radiomod.bare_wire": "Оголённый провод",
-    "item.radiomod.bare_wire.tooltip": "Провод пропускает через себя электрический ток",
+    "item.radiomod.bare_wire.tooltip": "Пропускает через себя электрический ток",
     "item.radiomod.wire": "Провод",
     "item.radiomod.wire.tooltip": "Провод с изоляцией",
     "item.radiomod.coil": "Дроссель",
@@ -15,9 +15,17 @@
     "item.radiomod.resistor.tooltip": "Создает дополнительное сопротивление в цепи и снижает уровень тока",
     "item.radiomod.transformer": "Трансформатор",
     "item.radiomod.transformer.tooltip": "Трансформатор преобразовывает напряжение",
+    "item.radiomod.tube": "Радиолампа",
+    "item.radiomod.tube.tooltip": "Усиливает токи и напряжения в схемах",
+    "item.radiomod.pcb": "Печатная плата",
+    "item.radiomod.pcb.tooltip": "Предназначена для механического соединения деталей",
     
     "block.radiomod.circuit_block": "Блок схемы",
     "block.radiomod.circuit_block.tooltip": "Блок, в котором вы можете собирать электрические цепи",
+    "block.radiomod.ampermetr": "Амперметр",
+    "item.radiomod.circuit_block.ampermetr": "Прибор, показывающий силу тока в цепи",
+
+    "item.radiomod.ampermetr.nosignal": "Нет тока",
 
     "itemGroup.radiomod.group": "Radio Mod"
 }

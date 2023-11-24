@@ -2,31 +2,32 @@ package org.barbaris.radiomod.blocks;
 
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.client.MinecraftClient;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventory;
 import net.minecraft.item.ItemPlacementContext;
-import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
+import net.minecraft.state.property.Properties;
+import net.minecraft.text.Text;
 import net.minecraft.util.*;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
+import org.barbaris.radiomod.Utils;
 
-public class CircuitBlock extends BlockWithEntity {
+import java.util.ArrayList;
+import java.util.List;
+
+public class Ampermetr extends Block {
 
     public static final DirectionProperty FACING = HorizontalFacingBlock.FACING;
 
-    public CircuitBlock(Settings settings) {
+    public Ampermetr(Settings settings) {
         super(settings);
-        this.setDefaultState((this.stateManager.getDefaultState()).with(FACING, Direction.NORTH)));
-    }
-
-    @Override
-    public BlockEntity createBlockEntity(BlockPos position, BlockState state) {
-        return new CircuitBlockEntity(position, state);
+        this.setDefaultState(this.stateManager.getDefaultState().with(FACING, Direction.NORTH));
     }
 
     @Override
@@ -57,10 +58,33 @@ public class CircuitBlock extends BlockWithEntity {
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos position, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if(!world.isClient) {
-            NamedScreenHandlerFactory screenHandlerFactory = state.createScreenHandlerFactory(world, position);
+            BlockPos neighbourPos1 = position.add(1, 0, 0);     // x + 1, z
+            BlockPos neighbourPos2 = position.add(0, 0, 1);     // x, z + 1
+            BlockPos neighbourPos3 = position.add(-1, 0, 0);    // x - 1, z
+            BlockPos neighbourPos4 = position.add(0, 0, -1);    // x, z - 1
 
-            if(screenHandlerFactory != null) {
-                player.openHandledScreen(screenHandlerFactory);
+            boolean isPowered = world.isReceivingRedstonePower(position);
+            MinecraftClient client = MinecraftClient.getInstance();
+
+            if(isPowered) {
+                List<Integer> powers = new ArrayList<>();
+
+                if(world.getBlockState(neighbourPos1).getBlock() instanceof RedstoneWireBlock) {
+                    powers.add(world.getBlockState(neighbourPos1).get(Properties.POWER));
+                }
+                if(world.getBlockState(neighbourPos2).getBlock() instanceof RedstoneWireBlock) {
+                    powers.add(world.getBlockState(neighbourPos2).get(Properties.POWER));
+                }
+                if(world.getBlockState(neighbourPos3).getBlock() instanceof RedstoneWireBlock) {
+                    powers.add(world.getBlockState(neighbourPos3).get(Properties.POWER));
+                }
+                if(world.getBlockState(neighbourPos4).getBlock() instanceof RedstoneWireBlock) {
+                    powers.add(world.getBlockState(neighbourPos4).get(Properties.POWER));
+                }
+
+                client.player.sendMessage(Text.of(String.valueOf(Utils.max(powers))));
+            } else {
+                client.player.sendMessage(Text.translatable("item.radiomod.ampermetr.nosignal"));
             }
         }
 
@@ -91,20 +115,3 @@ public class CircuitBlock extends BlockWithEntity {
         return ScreenHandler.calculateComparatorOutput(world.getBlockEntity(position));
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

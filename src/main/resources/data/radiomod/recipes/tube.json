@@ -1,0 +1,27 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "GRG",
+      "GNG",
+      "B B"
+    ],
+    "key": {
+      "G": {
+        "item": "minecraft:glass"
+      },
+      "B": {
+        "item": "radiomod:bare_wire"
+      },
+      "R": {
+        "item": "minecraft:redstone"
+      },
+      "N": {
+        "item": "minecraft:iron_nugget"
+      }
+    },
+    "result": {
+      "item": "radiomod:tube",
+      "count": 2
+    }
+  }
+  
