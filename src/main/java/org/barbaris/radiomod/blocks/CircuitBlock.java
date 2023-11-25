@@ -21,7 +21,7 @@ public class CircuitBlock extends BlockWithEntity {
 
     public CircuitBlock(Settings settings) {
         super(settings);
-        this.setDefaultState((this.stateManager.getDefaultState()).with(FACING, Direction.NORTH)));
+        this.setDefaultState((this.stateManager.getDefaultState()).with(FACING, Direction.NORTH));
     }
 
     @Override

@@ -62,6 +62,10 @@ public class Ampermetr extends Block {
             BlockPos neighbourPos2 = position.add(0, 0, 1);     // x, z + 1
             BlockPos neighbourPos3 = position.add(-1, 0, 0);    // x - 1, z
             BlockPos neighbourPos4 = position.add(0, 0, -1);    // x, z - 1
+            BlockState pos1 = world.getBlockState(neighbourPos1);
+            BlockState pos2 = world.getBlockState(neighbourPos2);
+            BlockState pos3 = world.getBlockState(neighbourPos3);
+            BlockState pos4 = world.getBlockState(neighbourPos4);
 
             boolean isPowered = world.isReceivingRedstonePower(position);
             MinecraftClient client = MinecraftClient.getInstance();
@@ -69,17 +73,22 @@ public class Ampermetr extends Block {
             if(isPowered) {
                 List<Integer> powers = new ArrayList<>();
 
-                if(world.getBlockState(neighbourPos1).getBlock() instanceof RedstoneWireBlock) {
-                    powers.add(world.getBlockState(neighbourPos1).get(Properties.POWER));
+                if(Utils.isRedstoneSource(pos1)) {
+                    client.player.sendMessage(Text.of("15"));
+                    return ActionResult.SUCCESS;
                 }
-                if(world.getBlockState(neighbourPos2).getBlock() instanceof RedstoneWireBlock) {
-                    powers.add(world.getBlockState(neighbourPos2).get(Properties.POWER));
+
+                if(pos1.getBlock() instanceof RedstoneWireBlock || pos1.getBlock() instanceof DaylightDetectorBlock) {
+                    powers.add(pos1.get(Properties.POWER));
                 }
-                if(world.getBlockState(neighbourPos3).getBlock() instanceof RedstoneWireBlock) {
-                    powers.add(world.getBlockState(neighbourPos3).get(Properties.POWER));
+                if(pos2.getBlock() instanceof RedstoneWireBlock || pos2.getBlock() instanceof DaylightDetectorBlock) {
+                    powers.add(pos2.get(Properties.POWER));
                 }
-                if(world.getBlockState(neighbourPos4).getBlock() instanceof RedstoneWireBlock) {
-                    powers.add(world.getBlockState(neighbourPos4).get(Properties.POWER));
+                if(pos3.getBlock() instanceof RedstoneWireBlock || pos3.getBlock() instanceof DaylightDetectorBlock) {
+                    powers.add(pos3.get(Properties.POWER));
+                }
+                if(pos4.getBlock() instanceof RedstoneWireBlock || pos4.getBlock() instanceof DaylightDetectorBlock) {
+                    powers.add(pos4.get(Properties.POWER));
                 }
 
                 client.player.sendMessage(Text.of(String.valueOf(Utils.max(powers))));

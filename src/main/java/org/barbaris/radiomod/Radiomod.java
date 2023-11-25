@@ -44,8 +44,9 @@ public class Radiomod implements ModInitializer {
     public static final BlockEntityType<CircuitBlockEntity> CIRCUIT_BLOCK_ENTITY = Registry.register(Registries.BLOCK_ENTITY_TYPE, CIRCUIT_ID, FabricBlockEntityTypeBuilder.create(CircuitBlockEntity::new, CIRCUIT_BLOCK).build(null));
     public static final ScreenHandlerType<CircuitBlockScreenHandler> CIRCUIT_BLOCK_SCREEN_HANDLER = ScreenHandlerRegistry.registerSimple(CIRCUIT_ID, CircuitBlockScreenHandler::new);
 
-    public static final Block AMPERMETR = Registry.register(Registries.BLOCK, new Identifier("radiomod", "ampermetr"), new Ampermetr(FabricBlockSettings.create().strength(1.0f).requiresTool()));
-    public static final BlockItem AMPERMETR_ITEM = Registry.register(Registries.ITEM, new Identifier("radiomod", "ampermetr"), new BlockItem(AMPERMETR, new Item.Settings()));
+    public static final Identifier AMPERMETR_ID = new Identifier("radiomod", "ampermetr");
+    public static final Block AMPERMETR = Registry.register(Registries.BLOCK, AMPERMETR_ID, new Ampermetr(FabricBlockSettings.create().strength(1.0f).requiresTool()));
+    public static final BlockItem AMPERMETR_ITEM = Registry.register(Registries.ITEM, AMPERMETR_ID, new BlockItem(AMPERMETR, new Item.Settings()));
 
     // -------------- MIX ------------
     private static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()

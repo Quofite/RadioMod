@@ -1,5 +1,7 @@
 package org.barbaris.radiomod;
 
+import net.minecraft.block.*;
+
 import java.util.List;
 
 public class Utils {
@@ -13,6 +15,15 @@ public class Utils {
         }
 
         return maxValue;
+    }
+
+    public static boolean isRedstoneSource(BlockState block) {
+        boolean flag = false;
+
+        if(block.getBlock() instanceof RedstoneTorchBlock) flag = true;
+        if(block.getBlock() instanceof RedstoneBlock) flag = true;
+
+        return flag;
     }
 
 }
