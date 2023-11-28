@@ -22,10 +22,11 @@
     
     "block.radiomod.circuit_block": "Блок схемы",
     "block.radiomod.circuit_block.tooltip": "Блок, в котором вы можете собирать электрические цепи",
-    "block.radiomod.ampermetr": "Амперметр",
-    "item.radiomod.circuit_block.ampermetr": "Прибор, показывающий силу тока в цепи",
+    "block.radiomod.voltmeter": "Вольтметр",
+    "item.radiomod.circuit_block.voltmeter": "Прибор, показывающий напряжение в цепи",
 
     "item.radiomod.ampermetr.nosignal": "Нет тока",
+    "subtitles.tutorial.my_sound": "Работает вольтметр",
 
     "itemGroup.radiomod.group": "Radio Mod"
 }

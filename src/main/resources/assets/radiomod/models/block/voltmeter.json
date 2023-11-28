@@ -2,11 +2,11 @@
     "parent": "minecraft:block/block",
 
     "textures": {
-        "front": "radiomod:block/ampermetr_front",
-        "side": "radiomod:block/ampermetr",
-        "top": "radiomod:block/ampermetr_top",
-        "bottom": "radiomod:block/ampermetr",
-        "particle": "radiomod:block/ampermetr"
+        "front": "radiomod:block/voltmeter_front",
+        "side": "radiomod:block/voltmeter",
+        "top": "radiomod:block/voltmeter_top",
+        "bottom": "radiomod:block/voltmeter",
+        "particle": "radiomod:block/voltmeter"
     },
     "elements": [
         {   "from": [ 0, 0, 0 ],

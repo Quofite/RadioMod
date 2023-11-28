@@ -1,18 +1,18 @@
 {
     "variants": {
         "facing=east": {
-          "model": "radiomod:block/ampermetr",
+          "model": "radiomod:block/voltmeter",
           "y": 90
         },
         "facing=north": {
-          "model": "radiomod:block/ampermetr"
+          "model": "radiomod:block/voltmeter"
         },
         "facing=south": {
-          "model": "radiomod:block/ampermetr",
+          "model": "radiomod:block/voltmeter",
           "y": 180
         },
         "facing=west": {
-          "model": "radiomod:block/ampermetr",
+          "model": "radiomod:block/voltmeter",
           "y": 270
         }
       }

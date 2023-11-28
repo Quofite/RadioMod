@@ -6,7 +6,7 @@
         "entries": [
           {
             "type": "minecraft:item",
-            "name": "radiomod:ampermetr"
+            "name": "radiomod:voltmeter"
           }
         ],
         "conditions": [

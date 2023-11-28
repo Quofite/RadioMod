@@ -1,0 +1,9 @@
+{
+    "voltmeter_use": {
+        "subtitle": "subtitles.tutorial.my_sound",
+        "sounds": [
+            "radiomod:voltmeter_use"
+        ]
+    }
+}
+

@@ -15,12 +15,13 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.screen.ScreenHandlerType;
+import net.minecraft.sound.SoundEvent;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
-import org.barbaris.radiomod.blocks.Ampermetr;
 import org.barbaris.radiomod.blocks.CircuitBlock;
 import org.barbaris.radiomod.blocks.CircuitBlockEntity;
 import org.barbaris.radiomod.blocks.CircuitBlockScreenHandler;
+import org.barbaris.radiomod.blocks.Voltmeter;
 import org.barbaris.radiomod.items.*;
 
 public class Radiomod implements ModInitializer {
@@ -44,9 +45,9 @@ public class Radiomod implements ModInitializer {
     public static final BlockEntityType<CircuitBlockEntity> CIRCUIT_BLOCK_ENTITY = Registry.register(Registries.BLOCK_ENTITY_TYPE, CIRCUIT_ID, FabricBlockEntityTypeBuilder.create(CircuitBlockEntity::new, CIRCUIT_BLOCK).build(null));
     public static final ScreenHandlerType<CircuitBlockScreenHandler> CIRCUIT_BLOCK_SCREEN_HANDLER = ScreenHandlerRegistry.registerSimple(CIRCUIT_ID, CircuitBlockScreenHandler::new);
 
-    public static final Identifier AMPERMETR_ID = new Identifier("radiomod", "ampermetr");
-    public static final Block AMPERMETR = Registry.register(Registries.BLOCK, AMPERMETR_ID, new Ampermetr(FabricBlockSettings.create().strength(1.0f).requiresTool()));
-    public static final BlockItem AMPERMETR_ITEM = Registry.register(Registries.ITEM, AMPERMETR_ID, new BlockItem(AMPERMETR, new Item.Settings()));
+    public static final Identifier VOLTMETER_ID = new Identifier("radiomod", "voltmeter");
+    public static final Block VOLTMETER = Registry.register(Registries.BLOCK, VOLTMETER_ID, new Voltmeter(FabricBlockSettings.create().strength(1.0f).requiresTool()));
+    public static final BlockItem VOLTMETER_ITEM = Registry.register(Registries.ITEM, VOLTMETER_ID, new BlockItem(VOLTMETER, new Item.Settings()));
 
     // -------------- MIX ------------
     private static final ItemGroup ITEM_GROUP = FabricItemGroup.builder()
@@ -64,9 +65,12 @@ public class Radiomod implements ModInitializer {
                 entries.add(PCB);
                 entries.add(TUBE);
 
-                entries.add(AMPERMETR_ITEM);
+                entries.add(VOLTMETER_ITEM);
                 entries.add(CIRCUIT_BLOCK_ITEM);
             }).build();
+
+    public static final Identifier VOLTMETER_SOUND_ID = new Identifier("radiomod", "voltmeter_use");
+    public static SoundEvent VOLTMETER_SOUND_EVENT = SoundEvent.of(VOLTMETER_SOUND_ID);
 
     // -------------- INITIALIZER ----
     @Override
@@ -82,6 +86,7 @@ public class Radiomod implements ModInitializer {
         Registry.register(Registries.ITEM, new Identifier("radiomod", "pcb"), PCB);
         Registry.register(Registries.ITEM, new Identifier("radiomod", "tube"), TUBE);
 
+        Registry.register(Registries.SOUND_EVENT, VOLTMETER_SOUND_ID, VOLTMETER_SOUND_EVENT);
         Registry.register(Registries.ITEM_GROUP, new Identifier("radiomod", "group"), ITEM_GROUP);
     }
 }

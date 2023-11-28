@@ -22,10 +22,11 @@
     
     "block.radiomod.circuit_block": "Circuit Block",
     "item.radiomod.circuit_block.tooltip": "Block where you can assemble electric circuits",
-    "block.radiomod.ampermetr": "Ampermetr",
-    "item.radiomod.circuit_block.ampermetr": "Device that shows current value in the circuit",
+    "block.radiomod.voltmeter": "Мoltmeter",
+    "item.radiomod.circuit_block.voltmeter": "Device that shows voltage value in the circuit",
 
     "item.radiomod.ampermetr.nosignal": "No current",
+    "subtitles.tutorial.my_sound": "Voltmeter is working",
 
     "itemGroup.radiomod.group": "Radio Mod"
 }

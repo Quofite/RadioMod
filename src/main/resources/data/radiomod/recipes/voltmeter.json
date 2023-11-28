@@ -17,7 +17,7 @@
       }
     },
     "result": {
-      "item": "radiomod:ampermetr",
+      "item": "radiomod:voltmeter",
       "count": 1
     }
 }

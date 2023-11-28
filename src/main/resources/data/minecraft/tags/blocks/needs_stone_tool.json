@@ -2,7 +2,7 @@
     "replace": false,
     "values": [
       "radiomod:circuit_block",
-      "radiomod:ampermetr"
+      "radiomod:voltmeter"
     ]
   }
 
