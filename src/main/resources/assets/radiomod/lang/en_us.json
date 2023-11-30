@@ -19,6 +19,8 @@
     "item.radiomod.tube.tooltip": "Amplifies current and voltage in circuit",
     "item.radiomod.pcb": "PCB",
     "item.radiomod.pcb.tooltip": "Used to connect elements to each other",
+    "item.radiomod.led": "LED",
+    "item.radiomod.led.tooltip": "Solid-state element that emits light",
     
     "block.radiomod.circuit_block": "Circuit Block",
     "item.radiomod.circuit_block.tooltip": "Block where you can assemble electric circuits",

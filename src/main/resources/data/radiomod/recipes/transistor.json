@@ -16,7 +16,7 @@
         "item": "minecraft:redstone"
       },
       "B": {
-        "item": "minecraft:iron_bars"
+        "item": "radiomod:bare_wire"
       }
     },
     "result": {

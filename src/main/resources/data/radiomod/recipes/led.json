@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+      "DG"
+    ],
+    "key": {
+      "D": {
+        "item": "radiomod:diode"
+      },
+      "G": {
+        "item": "minecraft:glowstone_dust"
+      }
+    },
+    "result": {
+      "item": "radiomod:led",
+      "count": 1
+    }
+  }
+  

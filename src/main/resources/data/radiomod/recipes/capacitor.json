@@ -10,7 +10,7 @@
         "item": "minecraft:iron_nugget"
       },
       "B": {
-        "item": "minecraft:iron_bars"
+        "item": "radiomod:bare_wire"
       }
     },
     "result": {

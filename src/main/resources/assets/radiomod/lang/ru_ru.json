@@ -19,6 +19,8 @@
     "item.radiomod.tube.tooltip": "Усиливает токи и напряжения в схемах",
     "item.radiomod.pcb": "Печатная плата",
     "item.radiomod.pcb.tooltip": "Предназначена для механического соединения деталей",
+    "item.radiomod.led": "Светодиод",
+    "item.radiomod.led.tooltip": "Полупроводник, испускающий свет",
     
     "block.radiomod.circuit_block": "Блок схемы",
     "block.radiomod.circuit_block.tooltip": "Блок, в котором вы можете собирать электрические цепи",
