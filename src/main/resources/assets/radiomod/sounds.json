@@ -1,8 +1,14 @@
 {
     "voltmeter_use": {
-        "subtitle": "subtitles.tutorial.my_sound",
+        "subtitle": "subtitles.radiomod.voltmeter_use",
         "sounds": [
             "radiomod:voltmeter_use"
+        ]
+    },
+    "voltage_damage_sound": {
+        "subtitle": "subtitles.radiomod.voltage_damage_sound",
+        "sounds": [
+            "radiomod:voltage_damage_sound"
         ]
     }
 }

@@ -23,12 +23,17 @@
     "item.radiomod.led.tooltip": "Полупроводник, испускающий свет",
     
     "block.radiomod.circuit_block": "Блок схемы",
-    "block.radiomod.circuit_block.tooltip": "Блок, в котором вы можете собирать электрические цепи",
+    "item.radiomod.circuit_block.tooltip": "Блок, в котором вы можете собирать электрические цепи",
     "block.radiomod.voltmeter": "Вольтметр",
-    "item.radiomod.circuit_block.voltmeter": "Прибор, показывающий напряжение в цепи",
+    "item.radiomod.voltmeter.tooltip": "Прибор, показывающий напряжение в цепи",
 
-    "item.radiomod.ampermetr.nosignal": "Нет тока",
-    "subtitles.tutorial.my_sound": "Работает вольтметр",
+    "item.radiomod.voltmeter.nosignal": "Нет тока",
+    "item.radiomod.circuit_block.under_voltage": "Прибор под напряжением",
+    
+    "death.attack.voltage": "%1$s умер от удара током",
+
+    "subtitles.radiomod.voltmeter_use": "Работает вольтметр",
+    "subtitles.radiomod.voltage_damage_sound": "Разряд электричества",
 
     "itemGroup.radiomod.group": "Radio Mod"
 }

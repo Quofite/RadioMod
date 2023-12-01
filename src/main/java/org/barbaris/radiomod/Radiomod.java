@@ -70,11 +70,12 @@ public class Radiomod implements ModInitializer {
                 entries.add(CIRCUIT_BLOCK_ITEM);
             }).build();
 
-    // ---
+    // --- sounds ---
 
     public static final Identifier VOLTMETER_SOUND_ID = new Identifier("radiomod", "voltmeter_use");
     public static SoundEvent VOLTMETER_SOUND_EVENT = SoundEvent.of(VOLTMETER_SOUND_ID);
-
+    public static Identifier VOLTAGE_DAMAGE_ID = new Identifier("radiomod", "voltage_damage_sound");
+    public static SoundEvent VOLTAGE_DAMAGE_SOUND_EVENT = SoundEvent.of(VOLTAGE_DAMAGE_ID);
 
 
     // -------------- INITIALIZER ----
@@ -93,6 +94,7 @@ public class Radiomod implements ModInitializer {
         Registry.register(Registries.ITEM, new Identifier("radiomod", "led"), LED);
 
         Registry.register(Registries.SOUND_EVENT, VOLTMETER_SOUND_ID, VOLTMETER_SOUND_EVENT);
+        Registry.register(Registries.SOUND_EVENT, VOLTAGE_DAMAGE_ID, VOLTAGE_DAMAGE_SOUND_EVENT);
         Registry.register(Registries.ITEM_GROUP, new Identifier("radiomod", "group"), ITEM_GROUP);
     }
 }

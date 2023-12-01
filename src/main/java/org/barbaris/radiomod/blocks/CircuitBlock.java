@@ -2,8 +2,14 @@ package org.barbaris.radiomod.blocks;
 
 import net.minecraft.block.*;
 import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.client.MinecraftClient;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.world.ServerWorld;
+import net.minecraft.sound.SoundCategory;
+import net.minecraft.text.Text;
 import net.minecraft.util.math.random.Random;
+import org.barbaris.radiomod.DamageTypes;
+import org.barbaris.radiomod.Radiomod;
 import org.barbaris.radiomod.Utils;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventory;
@@ -76,10 +82,17 @@ public class CircuitBlock extends BlockWithEntity {
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos position, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if(!world.isClient) {
-            NamedScreenHandlerFactory screenHandlerFactory = state.createScreenHandlerFactory(world, position);
+            if(!world.isReceivingRedstonePower(position)) {
+                NamedScreenHandlerFactory screenHandlerFactory = state.createScreenHandlerFactory(world, position);
 
-            if(screenHandlerFactory != null) {
-                player.openHandledScreen(screenHandlerFactory);
+                if(screenHandlerFactory != null) {
+                    player.openHandledScreen(screenHandlerFactory);
+                }
+            } else {
+                // MinecraftClient client = MinecraftClient.getInstance();
+                player.sendMessage(Text.translatable("item.radiomod.circuit_block.under_voltage"));
+                world.playSound(null, position, Radiomod.VOLTAGE_DAMAGE_SOUND_EVENT, SoundCategory.BLOCKS, 0.1f, 1f);
+                player.damage(DamageTypes.of(world, DamageTypes.VOLTAGE_DAMAGE_TYPE), 10.0f);
             }
         }
 

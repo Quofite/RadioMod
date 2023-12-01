@@ -24,11 +24,16 @@
     
     "block.radiomod.circuit_block": "Circuit Block",
     "item.radiomod.circuit_block.tooltip": "Block where you can assemble electric circuits",
-    "block.radiomod.voltmeter": "Мoltmeter",
-    "item.radiomod.circuit_block.voltmeter": "Device that shows voltage value in the circuit",
+    "block.radiomod.voltmeter": "Voltmeter",
+    "item.radiomod.voltmeter.tooltip": "Device that shows voltage value in the circuit",
 
-    "item.radiomod.ampermetr.nosignal": "No current",
-    "subtitles.tutorial.my_sound": "Voltmeter is working",
+    "item.radiomod.voltmeter.nosignal": "No current",
+    "item.radiomod.circuit_block.under_voltage": "Device is under voltage",
+    
+    "death.attack.voltage": "%1$s died from a electric shock",
+
+    "subtitles.radiomod.voltmeter_use": "Voltmeter is working",
+    "subtitles.radiomod.voltage_damage_sound": "Electric shock",
 
     "itemGroup.radiomod.group": "Radio Mod"
 }

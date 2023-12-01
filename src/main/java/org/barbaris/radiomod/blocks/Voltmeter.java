@@ -105,7 +105,7 @@ public class Voltmeter extends Block {
 
                 client.player.sendMessage(Text.of(String.valueOf(Utils.max(powers))));
             } else {
-                client.player.sendMessage(Text.translatable("item.radiomod.ampermetr.nosignal"));
+                client.player.sendMessage(Text.translatable("item.radiomod.voltmeter.nosignal"));
             }
         }
 
