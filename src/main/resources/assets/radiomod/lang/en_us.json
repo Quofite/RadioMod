@@ -21,6 +21,8 @@
     "item.radiomod.pcb.tooltip": "Used to connect elements to each other",
     "item.radiomod.led": "LED",
     "item.radiomod.led.tooltip": "Solid-state element that emits light",
+    "item.radiomod.ic": "Microchip",
+    "item.radiomod.ic.tooltip": "Small integral circuit",
     
     "block.radiomod.circuit_block": "Circuit Block",
     "item.radiomod.circuit_block.tooltip": "Block where you can assemble electric circuits",
@@ -29,8 +31,11 @@
 
     "item.radiomod.voltmeter.nosignal": "No current",
     "item.radiomod.circuit_block.under_voltage": "Device is under voltage",
+    "item.radiomod.circuit_block.hour": "Hour(s)",
     
     "death.attack.voltage": "%1$s died from a electric shock",
+
+    "entity.minecraft.villager.engineer": "Engineer",
 
     "subtitles.radiomod.voltmeter_use": "Voltmeter is working",
     "subtitles.radiomod.voltage_damage_sound": "Electric shock",

@@ -10,19 +10,20 @@ import net.minecraft.util.Identifier;
 
 public class CircuitBlockScreen extends HandledScreen<CircuitBlockScreenHandler> {
 
-    private static final Identifier TEXTURE = new Identifier("minecraft", "textures/gui/container/dispenser.png");
+    private static final Identifier TEXTURE = new Identifier("radiomod", "textures/gui/container/circuit_block_gui.png");
 
     public CircuitBlockScreen(CircuitBlockScreenHandler handler, PlayerInventory inventory, Text title) {
         super(handler, inventory, title);
+        this.backgroundHeight = 114 + 6 * 18;
     }
 
     @Override
     protected void drawBackground(DrawContext context, float delta, int mouseX, int mouseY) {
-        RenderSystem.setShader(GameRenderer::getPositionTexProgram);
         RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
         RenderSystem.setShaderTexture(0, TEXTURE);
         int x = (width - backgroundWidth) / 2;
         int y = (height - backgroundHeight) / 2;
+        RenderSystem.setShader(GameRenderer::getPositionTexProgram);
         context.drawTexture(TEXTURE, x, y, 0, 0, backgroundWidth, backgroundHeight);
     }
 
@@ -37,6 +38,6 @@ public class CircuitBlockScreen extends HandledScreen<CircuitBlockScreenHandler>
     protected void init() {
         super.init();
         // Center the title
-        titleX = (backgroundWidth - textRenderer.getWidth(title)) / 2;
+        //titleX = (backgroundWidth - textRenderer.getWidth(title)) / 2;
     }
 }

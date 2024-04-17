@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "BBB",
+        "FRF",
+        "BBB"
+    ],
+    "key": {
+      "F": {
+        "item": "minecraft:flint"
+      },
+      "B": {
+        "item": "radiomod:bare_wire"
+      },
+      "R": {
+        "item": "minecrfat:redstone"
+      }
+    },
+    "result": {
+      "item": "radiomod:ic",
+      "count": 1
+    }
+}

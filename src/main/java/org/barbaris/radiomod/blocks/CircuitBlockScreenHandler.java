@@ -11,33 +11,36 @@ import org.barbaris.radiomod.Radiomod;
 
 public class CircuitBlockScreenHandler extends ScreenHandler {
     private final Inventory inventory;
+    private static final int INVENTORY_SIZE = 54;
 
     public CircuitBlockScreenHandler(int syncID, PlayerInventory playerInventory) {
-        this(syncID, playerInventory, new SimpleInventory(9));
+        this(syncID, playerInventory, new SimpleInventory(54));
     }
 
     public CircuitBlockScreenHandler(int syncID, PlayerInventory playerInventory, Inventory inventory) {
         super(Radiomod.CIRCUIT_BLOCK_SCREEN_HANDLER, syncID);
-        checkSize(inventory, 9);
+        checkSize(inventory, INVENTORY_SIZE);
         this.inventory = inventory;
         inventory.onOpen(playerInventory.player);
-        int m;
-        int l;
 
-        for (m = 0; m < 3; ++m) {
-            for (l = 0; l < 3; ++l) {
-                this.addSlot(new Slot(inventory, l + m * 3, 62 + l * 18, 17 + m * 18));
+        int i;
+        int j;
+        // Chest Inventory
+        for (i = 0; i < 6; i++) {
+            for (j = 0; j < 9; j++) {
+                this.addSlot(new Slot(inventory, i * 9 + j, 8 + j * 18, 18 + i * 18));
             }
         }
 
-        for (m = 0; m < 3; ++m) {
-            for (l = 0; l < 9; ++l) {
-                this.addSlot(new Slot(playerInventory, l + m * 9 + 9, 8 + l * 18, 84 + m * 18));
+        // Player Inventory (27 storage + 9 hotbar)
+        for (i = 0; i < 3; i++) {
+            for (j = 0; j < 9; j++) {
+                this.addSlot(new Slot(playerInventory, i * 9 + j + 9, 8 + j * 18, 18 + i * 18 + 103 + 18));
             }
         }
 
-        for (m = 0; m < 9; ++m) {
-            this.addSlot(new Slot(playerInventory, m, 8 + m * 18, 142));
+        for (j = 0; j < 9; j++) {
+            this.addSlot(new Slot(playerInventory, j, 8 + j * 18, 18 + 161 + 18));
         }
     }
 

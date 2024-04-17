@@ -9,7 +9,6 @@ import net.fabricmc.fabric.api.screenhandler.v1.ScreenHandlerRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.entity.BlockEntityType;
-import net.minecraft.entity.decoration.painting.PaintingVariant;
 import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -22,8 +21,13 @@ import org.barbaris.radiomod.blocks.CircuitBlockEntity;
 import org.barbaris.radiomod.blocks.CircuitBlockScreenHandler;
 import org.barbaris.radiomod.blocks.Voltmeter;
 import org.barbaris.radiomod.items.*;
+import org.barbaris.radiomod.mix.Trades;
+import org.barbaris.radiomod.villagers.EngineerVillager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Radiomod implements ModInitializer {
+    public static final Logger LOGGER = LoggerFactory.getLogger("radiomod");
 
     // -------------- ITEMS ----------
     public static final Item CAPACITOR = new Capacitor(new FabricItemSettings());
@@ -37,6 +41,7 @@ public class Radiomod implements ModInitializer {
     public static final Item TUBE = new Tube(new FabricItemSettings());
     public static final Item PCB = new Pcb(new FabricItemSettings());
     public static final Item LED = new Led(new FabricItemSettings());
+    public static final Item IC = new IC(new FabricItemSettings());
 
     // -------------- BLOCKS ---------
     public static final Identifier CIRCUIT_ID = new Identifier("radiomod", "circuit_block");
@@ -65,6 +70,7 @@ public class Radiomod implements ModInitializer {
                 entries.add(PCB);
                 entries.add(TUBE);
                 entries.add(LED);
+                entries.add(IC);
 
                 entries.add(VOLTMETER_ITEM);
                 entries.add(CIRCUIT_BLOCK_ITEM);
@@ -92,9 +98,13 @@ public class Radiomod implements ModInitializer {
         Registry.register(Registries.ITEM, new Identifier("radiomod", "pcb"), PCB);
         Registry.register(Registries.ITEM, new Identifier("radiomod", "tube"), TUBE);
         Registry.register(Registries.ITEM, new Identifier("radiomod", "led"), LED);
+        Registry.register(Registries.ITEM, new Identifier("radiomod", "ic"), IC);
 
         Registry.register(Registries.SOUND_EVENT, VOLTMETER_SOUND_ID, VOLTMETER_SOUND_EVENT);
         Registry.register(Registries.SOUND_EVENT, VOLTAGE_DAMAGE_ID, VOLTAGE_DAMAGE_SOUND_EVENT);
         Registry.register(Registries.ITEM_GROUP, new Identifier("radiomod", "group"), ITEM_GROUP);
+
+        EngineerVillager.registerVillager();
+        Trades.registerCustomTrades();
     }
 }

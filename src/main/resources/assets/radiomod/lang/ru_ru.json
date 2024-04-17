@@ -21,6 +21,8 @@
     "item.radiomod.pcb.tooltip": "Предназначена для механического соединения деталей",
     "item.radiomod.led": "Светодиод",
     "item.radiomod.led.tooltip": "Полупроводник, испускающий свет",
+    "item.radiomod.ic": "Микросхема",
+    "item.radiomod.ic.tooltip": "Маленькая интегральная схема",
     
     "block.radiomod.circuit_block": "Блок схемы",
     "item.radiomod.circuit_block.tooltip": "Блок, в котором вы можете собирать электрические цепи",
@@ -29,8 +31,11 @@
 
     "item.radiomod.voltmeter.nosignal": "Нет тока",
     "item.radiomod.circuit_block.under_voltage": "Прибор под напряжением",
+    "item.radiomod.circuit_block.hour": "Час(ов)",
     
     "death.attack.voltage": "%1$s умер от удара током",
+
+    "entity.minecraft.villager.engineer": "Инженер",
 
     "subtitles.radiomod.voltmeter_use": "Работает вольтметр",
     "subtitles.radiomod.voltage_damage_sound": "Разряд электричества",

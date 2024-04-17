@@ -19,7 +19,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 import org.barbaris.radiomod.Radiomod;
-import org.barbaris.radiomod.Utils;
+import org.barbaris.radiomod.mix.Utils;
 
 import java.util.ArrayList;
 import java.util.List;

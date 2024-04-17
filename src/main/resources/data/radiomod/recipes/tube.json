@@ -16,7 +16,7 @@
         "item": "minecraft:redstone"
       },
       "N": {
-        "item": "radiomod:bare_wire"
+        "item": "radiomod:copper_ingot"
       }
     },
     "result": {

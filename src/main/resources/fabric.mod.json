@@ -17,6 +17,9 @@
     ],
     "main": [
       "org.barbaris.radiomod.Radiomod"
+    ],
+    "fabric-datagen": [
+      "org.barbaris.radiomod.RadiomodDataGenerator"
     ]
   },
   "mixins": [
@@ -28,3 +31,4 @@
     "minecraft": "${minecraft_version}"
   }
 }
+
